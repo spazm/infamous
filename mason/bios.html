@@ -1,0 +1,30 @@
+<& lib/header.mas,      title   => 'Hip Huck Team Bios' &>
+<& lib/leftbar.mas,     page_id => 'bios'               &>
+<& lib/page_header.mas, text    => 'Meet the Squad'     &>
+
+<%perl>
+my @photos = (
+	Hippo   => [qw( hippo-bigmouth.jpg               )],
+	Simon   => [qw( simon-superman.jpg               )],
+	Bret    => [qw( bret.jpg                         )],
+	Eyore   => [qw( eyore.jpg                        )],
+	Foca    => [qw( foca.jpg                         )],
+	Frantz  => [qw( frantz.jpg frantz-2.jpg           )],
+	Jameson => [qw( jameson.jpg                      )],
+	Kief    => [qw( keif-1.jpg kief-2.jpg kief-3.jpg )],
+	Matt    => [qw( matt.jpg                         )],
+	Stone   => [qw( stone.jpg                        )],
+	Spaz    => [qw( spaz.jpg                         )],
+);
+</%perl>
+% while (my ($name, $photo )=splice(@photos, 0 ,2)) {
+% 	foreach my $image (@$photo ){
+	<img src="photos/<% $image %>" 
+		alt="<% $name %>" 
+		title="<% $name %>" 
+	>
+%	}
+	<br>
+%}
+
+<& lib/footer.mas &>
