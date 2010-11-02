@@ -30,6 +30,8 @@ sub convert {
   # components.  $_ contains the filename
   return unless (/\.html$/ or /\.css$/);
 
+  print STDERR (sprintf "file: %-20s target: %s\n", $_, $target);
+
   my $buffer;
   # This will save the component's output in $buffer
   $interp->out_method(\$buffer);

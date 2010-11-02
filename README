@@ -1,0 +1,34 @@
+Directories:
+	mason/
+		* contains the templated versions of files.  Any file named .html or .css will be run through mason to generate the static files in out/
+		* current files that pass through to out:
+			file: bios.html            target: out
+			file: history.html         target: out
+			file: index.html           target: out
+			file: philo.html           target: out
+			file: photos.html          target: out
+			file: style.css            target: out
+			file: test.html            target: out
+			file: video.html           target: out
+	out/
+		* static files generated from mason. 
+		* static subdirectories for image files: images/ photos/ css/
+		css/
+		images/
+		photos/
+
+Build output files from input files:
+	mason/generate.pl mason/ out/
+	(Yes, a bit cheesy, but this may well get improved)
+
+Mason template files in mason/
+	These files use a simple templating system.
+	uses <& &> pairs to offset the tags, this should interoperate with dreamweaver style tools.
+	mostly this is used to create the look-and-feel of the pages through page wrapper boilerplate like <& filename key=>value &> to load a file 'filename' and pass in arguments key=value.
+
+	example template:
+		<& lib/header.mas, title => "Bid for Kaimana Klassik 23 :: The Truth" &>
+		<& lib/leftbar.mas, page_id=>'index' &>
+		<& lib/page_header.mas, text => "The Truth" &>
+		...
+		<& lib/footer.mas &>
