@@ -18,14 +18,15 @@ my @photos = (
 );
 </%perl>
 % while (my ($name, $photo )=splice(@photos, 0 ,2)) {
-	<p><h2> <% $name %></h2>
+	<p class=photo>
 % 	foreach my $image (@$photo ){
 	<img src="photos/<% $image %>" 
 		alt="<% $name %>" 
 		title="<% $name %>" 
-	>
+	> <br />
 %	}
-	<br>
+	<% $name %>
+	</p>
 %}
 
 <& lib/footer.mas &>
