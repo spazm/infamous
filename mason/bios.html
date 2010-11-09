@@ -178,7 +178,7 @@ my @players = (
 % foreach my $year (qw(2011 2010)) {
 <ul><% $year %>
 %	foreach my $player (@players) {
-<% (grep {$year}@{$player->{years}}) ? "<li>#$player->{number} <a href=\"#$player->{name}\"> $player->{name}</a>" : '' %>
+<% (grep {$_ == $year}@{$player->{years}}) ? "<li>#$player->{number} <a href=\"#$player->{name}\"> $player->{name}</a>" : '' %>
 %	}
 </ul>
 % }
