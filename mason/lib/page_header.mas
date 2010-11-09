@@ -2,5 +2,5 @@
 $text
 </%args>
 % if( $text ) {
-<div class="title" align="center"><% $text %></div>
+<div class="title"><% $text %></div>
 % }

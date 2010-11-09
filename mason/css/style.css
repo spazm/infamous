@@ -1,61 +1,74 @@
-body { 
-	background-color: #000; 
-	color: #fff;
+body#unused {
+	background-image: url('../images/logo_white_on_purple.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+body {
+	background-color: #F8CF3B;
+	color: #ED86B5;
 	border-color: #fff;
 	font-family: "Comic Sans", "Comic Sans MS", "Arial";
-	font-size: 18px; 
+	font-size: 14px;
 }
-.title { 
-	margin: 0px 0px 18px 0px; 
-	font-size: 24px; 
-	font-weight: bold; 
+.title {
+	margin: 0px 0px 18px 0px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
 }
-a { color: #fff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a[href] {
+	color: white;
+	text-decoration: none;
+}
+a[href]:hover {
+	color: #ED86B5;
+	text-decoration: none;
+}
 a.nav {
 	font-size: 14px;
 	text-align: left;
 	display: block;
 	padding: 5px 5px 5px 0.5em;
-	border-left:  10px solid #5abeff;
-	border-right: 10px solid #5abeff;
-	background-color: #4141ff;
-
+	border-top:  1px solid #673191;
+	border-bottom:  1px solid #673191;
+	border-left:  10px solid #7745A5;
+	border-right: 10px solid #7745A5;
+	background-color: #673191;
 	color: #fff;
 	text-decoration: none;
-	width: 100%;
+	width: auto;
 }
-html>body a.nav { width: auto; }
 a.nav:hover {
-	border-left: 10px solid #1c64d1;
-	border-right: 10px solid #1c64d1;
-	background-color: #2586d7;
-	color: #fff;
+	color: #ED86B5;
+	text-decoration: none;
 }
 a.nav2 {
 	font-size: 14px;
 	text-align: left;
 	display: block;
 	padding: 5px 5px 5px 0.5em;
-	border-left: 10px solid #1c64d1;
-	border-right: 10px solid #1c64d1;
-	background-color: #2586d7;
-
-	color: #fff;
+	border-left: 10px solid #F8DF4B;
+	border-right: 10px solid #F8DF4B;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #F8CF3B;
+	color: #ED86B5;
 	text-decoration: none;
-	width: 100%;
+	width: auto;
 }
-html>body a.nav2 { width: auto; }
 a.nav2:hover {
-	border-left: 10px solid #1c64d1;
-	border-right: 10px solid #1c64d1;
-	background-color: #2586d7;
-	color: #fff;
+	border-left: 10px solid #F8DF4B;
+	border-right: 10px solid #F8DF4B;
+	background-color: #F8CF3B;
+	color: #ED86B5;
+	text-decoration: none;
 }
 
 p.photo {
-	background-color: white;
+	background-color: #673191;
 	border: 1px solid black;
-	color: black;
+	color: white;
 	padding: 5px;
+	text-align: center;
 }

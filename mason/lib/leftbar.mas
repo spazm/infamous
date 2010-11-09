@@ -3,7 +3,7 @@
 </%args>
 <%perl>
 my @names = ( 
-	index   => { name => "The Truth"   , },
+	index   => { name => "Have You Herd?"   , },
 	philo   => { name => "Philosophy"  , },
 	bios    => { name => "Biographies" , },
 	video   => { name => "Video"       , },
@@ -15,7 +15,7 @@ my @names = (
 <table border="0" cellspacing="0" cellpadding="0">
 	<tr valign="top">
 		<td width="150" align="center">
-			<table width="150" border="0" cellpadding="0" cellspacing="0">
+			<table width="170" border="0" cellpadding="0" cellspacing="0">
 
 % while( my ($page,$info)= splice(@names,0,2)) {
 % my $name  = $info->{name};
@@ -33,6 +33,7 @@ my @names = (
 					></td>
 				</tr>
 %	}
+
 			</table>
 			<br>
 			<img src="images/hippo.jpg" alt="" 
@@ -44,5 +45,5 @@ my @names = (
 			<img src="images/spacer.gif" alt="" 
 				 width="10" height="1" border="0">
 		</td>
-		<td width="600" align="center">
+		<td width="600">
 

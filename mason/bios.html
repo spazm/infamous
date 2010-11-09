@@ -1,33 +1,196 @@
-<& lib/header.mas,      title   => 'Hip Huck Team Bios' &>
+<& lib/header.mas,      title   => 'Player Bios'        &>
 <& lib/leftbar.mas,     page_id => 'bios'               &>
 <& lib/page_header.mas, text    => 'Meet the Squad'     &>
 
 <%perl>
-my @photos = (
-	Hippo   => [qw( hippo-bigmouth.jpg   )],
-	Alan    => [qw( alan_ladies.jpg      )],
-	Brett   => [qw( brett_cape.jpg       )],
-	"Tank and Chad" => [qw( tank_and_chad.jpg )],
-	Eyore   => [qw( eyore.jpg            )],
-	Foca    => [qw( foca_sand.jpg        )],
-	Frantz  => [qw( frantz_gladiator.jpg )],
-	Kief    => [qw( kief_lookin_good.jpg )],
-	Matt    => [qw( matt.jpg             )],
-	Simon   => [qw( simon-superman.jpg   )],
-	Spaz    => [qw( spaz_defense.jpg     )],
-	Stone   => [qw( stone.jpg            )],
-	Zeff    => [qw( zeff_cranky.jpg      )],
+my @players = (
+	{
+		name	=> "Steve 'Foca' McDonnell",
+		number	=> 2,
+		photo	=> 'foca_sand.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Evan 'softie' Vald&eacute;s",
+		number	=> 3,
+		photo	=> 'eyore.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Kief 'Fanta' Zangaro",
+		number	=> 7,
+		photo	=> 'kief_lookin_good.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Chad Underwood",
+		number	=> 10,
+		photo	=> 'tank_and_chad.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Barrs Lang",
+		number	=> 11,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Doug Galbraith",
+		number	=> 14,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Scott Hills",
+		number	=> 20,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Trey Paulissen",
+		number	=> 22,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Samuel 'Hammie' Chen",
+		number	=> 24,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
+	{
+		name	=> "Peter 'Tank' Tanaka",
+		number	=> 34,
+		photo	=> 'tank_and_chad.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Andrew 'Spaz' Grangaard",
+		number	=> 36,
+		photo	=> 'spaz_defense.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> 'Brett Schellenberg',
+		number	=> 42,
+		photo	=> 'brett_cape.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Charles 'Stone' Agnello",
+		number	=> 43,
+		photo	=> 'stone.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Matt Frantz",
+		number	=> 58,
+		photo	=> 'frantz_gladiator.jpg',
+		info	=> '',
+		years	=> [ qw(2010)],
+	},
+	{
+		name	=> "Andy Hutchinson",
+		number	=> 68,
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "John 'Zeff' Zyphur",
+		number	=> 70,
+		photo	=> 'zeff_cranky.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> 'Alan Marquardt',
+		number	=> 73,
+		photo	=> 'alan_ladies.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Simon Margiolis",
+		number	=> '',
+		photo	=> 'simon-superman.jpg',
+		info	=> '',
+		years	=> [ qw(2010)],
+	},
+	{
+		name	=> "Matt Henessey",
+		number	=> '' ,
+		photo	=> 'matt.jpg',
+		info	=> '',
+		years	=> [ qw(2010 2011)],
+	},
+	{
+		name	=> "Mark Hartford",
+		number	=> '',
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
+	{
+		name	=> "Eli Menaker",
+		number	=> '',
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
+	{
+		name	=> "Mick Grier",
+		number	=> '',
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
+	{
+		name	=> "Will Harris",
+		number	=> '',
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
+	{
+		name	=> "Zach Rank",
+		number	=> '',
+		photo	=> '',
+		info	=> '',
+		years	=> [ qw(2011)],
+	},
 );
 </%perl>
-% while (my ($name, $photo )=splice(@photos, 0 ,2)) {
-	<p class=photo>
-% 	foreach my $image (@$photo ){
-	<img src="photos/<% $image %>" 
-		alt="<% $name %>" 
-		title="<% $name %>" 
-	> <br />
+
+% foreach my $year (qw(2011 2010)) {
+<ul><% $year %>
+%	foreach my $player (@players) {
+<% (grep {$year}@{$player->{years}}) ? "<li>#$player->{number} <a href=\"#$player->{name}\"> $player->{name}</a>" : '' %>
 %	}
-	<% $name %>
+</ul>
+% }
+
+
+% foreach my $player (@players) {
+	<p class=photo><a name="<% $player->{name} %>">
+	<img src="<% $player->{photo} ? "photos/$player->{photo}" : "images/logo_white_on_purple.jpg" %>" 
+		alt="<% $player->{name} %>" 
+		title="<% $player->{name} %>" 
+	> <br />
+	<% $player->{name} %>
 	</p>
 %}
 
