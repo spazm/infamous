@@ -10,6 +10,7 @@ my @photos = (
 	{ file => "hippos_reunite.jpg",   caption => "Chad's in town" },
 );
 </%perl>
+<div id="photos">
 % foreach my $photo (@photos){
 	<p class=photo>
 	<img src="photos/<% $photo->{file} %>"
@@ -19,5 +20,5 @@ my @photos = (
 	<% $photo->{caption} %>
 	</p>
 %}
-
+</div>
 <& lib/footer.mas &>

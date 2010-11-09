@@ -35,7 +35,7 @@ my @players = (
 	{
 		name	=> "Barrs Lang",
 		number	=> 11,
-		photo	=> '',
+		photo	=> 'barrs_pow.jpg',
 		info	=> '',
 		years	=> [ qw(2010 2011)],
 	},
@@ -49,14 +49,14 @@ my @players = (
 	{
 		name	=> "Scott Hills",
 		number	=> 20,
-		photo	=> '',
+		photo	=> 'scott_pretty.jpg',
 		info	=> '',
 		years	=> [ qw(2010 2011)],
 	},
 	{
 		name	=> "Trey Paulissen",
 		number	=> 22,
-		photo	=> '',
+		photo	=> 'trey_boa.jpg',
 		info	=> '',
 		years	=> [ qw(2010 2011)],
 	},
@@ -147,7 +147,7 @@ my @players = (
 	{
 		name	=> "Eli Menaker",
 		number	=> '',
-		photo	=> '',
+		photo	=> 'eli_disc.jpg',
 		info	=> '',
 		years	=> [ qw(2011)],
 	},
@@ -183,7 +183,8 @@ my @players = (
 </ul>
 % }
 
-
+<hr>
+<div id="photos">
 % foreach my $player (@players) {
 	<p class=photo><a name="<% $player->{name} %>">
 	<img src="<% $player->{photo} ? "photos/$player->{photo}" : "images/logo_white_on_purple.jpg" %>" 
@@ -193,5 +194,5 @@ my @players = (
 	<% $player->{name} %>
 	</p>
 %}
-
+</div>
 <& lib/footer.mas &>

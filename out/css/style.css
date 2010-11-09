@@ -65,10 +65,40 @@ a.nav2:hover {
 	text-decoration: none;
 }
 
+div#header {
+	background-color: #673191;
+	float: left;
+	width: 1700px;
+	height: 100px;
+}
+
+div#leftnav {
+	position: fixed;
+}
+
+div#content {
+	float: left;
+	width: 650px;
+	margin-left: 151px;
+	padding: 25px;
+	border: 3px solid #673191;
+	background-color: #F8DF4B
+}
+
+div#photos {
+	text-align: center;
+}
+
 p.photo {
 	background-color: #673191;
 	border: 1px solid black;
 	color: white;
 	padding: 5px;
 	text-align: center;
+	display: inline-block;
+	font-size: larger;
+}
+
+p.photo img {
+	max-width: 600px;
 }
