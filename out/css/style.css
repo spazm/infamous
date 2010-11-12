@@ -96,3 +96,14 @@ p.photo {
 p.photo img {
 	max-width: 600px;
 }
+
+img.inline_left {
+	float: left;
+	clear: right;
+	margin-right: 20px;
+}
+img.inline_right {
+	float: right;
+	clear: left;
+	margin-left: 20px;
+}
