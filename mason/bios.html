@@ -176,7 +176,7 @@ my @players = (
 </%perl>
 
 % foreach my $year (qw(2012 2011 2010)) {
-<ul><% $year %>
+<ul><a name='<%$year%>'><%$year%></a>
 %	foreach my $player (@players) {
 <% (grep {$_ == $year}@{$player->{years}}) ? "<li>#$player->{number} <a href=\"#$player->{name}\"> $player->{name}</a>" : '' %>
 %	}
