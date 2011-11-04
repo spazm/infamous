@@ -12,12 +12,12 @@ body {
 	text-align: center;
 }
 a[href] {
-	color: white;
-	text-decoration: none;
+	color: #673191;
+	text-decoration: underline;
 }
 a[href]:hover {
 	color: #ED86B5;
-	text-decoration: none;
+	text-decoration: underline;
 }
 a.nav {
 	font-size: 14px;

@@ -15,7 +15,7 @@ my @names = (
 <div id='leftnav'>
 	<table border="0" cellpadding="0" cellspacing="0">
 		<tr valign="middle">
-			<td width="134"><img src="images/logo_white_on_purple_154.png" alt="" border="0"></td>
+			<td width="134"><a href="http://infamo.us/kk25/"><img src="images/logo_white_on_purple_154.png" alt="" border="0"></a></td>
 		</tr>
 
 % while( my ($page,$info)= splice(@names,0,2)) {
