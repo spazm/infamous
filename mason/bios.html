@@ -9,7 +9,7 @@ my @players = (
 		number	=> 2,
 		photo	=> 'foca_sand.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Evan 'softie' Vald&eacute;s",
@@ -23,21 +23,21 @@ my @players = (
 		number	=> 7,
 		photo	=> 'kief_lookin_good.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Chad Underwood",
 		number	=> 10,
 		photo	=> 'tank_and_chad.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Barrs Lang",
 		number	=> 11,
 		photo	=> 'barrs_pow.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Doug Galbraith",
@@ -51,49 +51,49 @@ my @players = (
 		number	=> 20,
 		photo	=> 'scott_pretty.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Trey Paulissen",
 		number	=> 22,
 		photo	=> 'trey_boa.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Samuel 'Hammie' Chen",
 		number	=> 24,
 		photo	=> 'hammie.jpg',
 		info	=> '',
-		years	=> [ qw(2011)],
+		years	=> [ qw(2011 2012)],
 	},
 	{
 		name	=> "Peter 'Tank' Tanaka",
 		number	=> 34,
 		photo	=> 'tank_and_chad.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Andrew 'Spaz' Grangaard",
 		number	=> 36,
 		photo	=> 'spaz_defense.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> 'Brett Schellenberg',
 		number	=> 42,
 		photo	=> 'brett_cape.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Charles 'Stone' Agnello",
 		number	=> 43,
 		photo	=> 'stone.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Matt Frantz",
@@ -114,14 +114,14 @@ my @players = (
 		number	=> 70,
 		photo	=> 'zeff_cranky.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> 'Alan Marquardt',
 		number	=> 73,
 		photo	=> 'alan_ladies.jpg',
 		info	=> '',
-		years	=> [ qw(2010 2011)],
+		years	=> [ qw(2010 2011 2012)],
 	},
 	{
 		name	=> "Simon Margiolis",
@@ -149,7 +149,7 @@ my @players = (
 		number	=> '',
 		photo	=> 'eli_disc.jpg',
 		info	=> '',
-		years	=> [ qw(2011)],
+		years	=> [ qw(2011 2012)],
 	},
 	{
 		name	=> "Mick Grier",
@@ -175,7 +175,7 @@ my @players = (
 );
 </%perl>
 
-% foreach my $year (qw(2011 2010)) {
+% foreach my $year (qw(2012 2011 2010)) {
 <ul><% $year %>
 %	foreach my $player (@players) {
 <% (grep {$_ == $year}@{$player->{years}}) ? "<li>#$player->{number} <a href=\"#$player->{name}\"> $player->{name}</a>" : '' %>
